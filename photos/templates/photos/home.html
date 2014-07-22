@@ -2,14 +2,71 @@
 <html>
     <head>
         {% load staticfiles %}
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--<link href="http://alextalmon.nl/css/bootstrap.css" rel="stylesheet">--!>
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+     
         <link rel="stylesheet" type="text/css" href="{% static 'photos/style.css' %}" />
     </head>
     <body>
-        <p> Madagascar </p>
+        
+        <div class="nav">
+            <ul class = pull-left>
+                <li> Architecture </li>
+                <li> Landscapes </li>
+                <li> Wildlife </li>
+                <li> Nature </li>
+            </ul> 
+            <ul class = pull-right>
+                <li> Home </li>
+                <li> About Me </li>
+            </ul> 
+        
+        </div>
 
-
-
-
+        <div class="thumbs">    
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Saguenay.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Toronto.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Montréal.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Madagascar.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Vosges.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/London.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Switzerland.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Seattle.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Tremblant.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Amalfi.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Napoli.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Paris Air Show.jpg' %}" >
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
+            <img class="img-responsive" src="{% static 'photos/Québec.jpg' %}" >
+          </div>
+      </div>          
+                        
     </body>
 </html>    
