@@ -29,3 +29,21 @@
     padding-left: 0;
     padding-right: 0;
 }
+
+.photo-label {
+  position: absolute;      
+  bottom: 5px;
+  right: 5px;
+}
+
+img:hover
+{
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+}
+img
+{
+    filter: none;
+    -webkit-filter: none;
+}
