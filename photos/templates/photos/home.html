@@ -5,68 +5,61 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--<link href="http://alextalmon.nl/css/bootstrap.css" rel="stylesheet">--!>
-        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-     
-        <link rel="stylesheet" type="text/css" href="{% static 'photos/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'photos/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'photos/css/style.css' %}" />
     </head>
     <body>
         
         <div class="nav">
             <ul class = pull-left>
-                <li> Architecture </li>
-                <li> Landscapes </li>
-                <li> Wildlife </li>
-                <li> Nature </li>
+                <li><a href="architecture/">Architecture</a> </li>
+                <li><a href="landscapes/">Landscapes</a> </li>
+                <li><a href="wildlife/">Wildlife</a> </li>
+                <li><a href="nature/">Nature</a> </li>
             </ul> 
             <ul class = pull-right>
-                <li> Home </li>
                 <li><a href="aboutme/">About Me</a> </li>
             </ul> 
-        
         </div>
 
         <div class="thumbs">    
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="saguenay/"><img class="img-responsive" src="{% static 'photos/Saguenay.jpg' %}" ></a>
+                <a href="toronto/"><img class="img-responsive" src="{% static 'photos/Toronto.jpg' %}" ><span class="photo-label">Toronto</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="toronto/"><img class="img-responsive" src="{% static 'photos/Toronto.jpg' %}" ></a>
+                <a href="montreal/"><img class="img-responsive" src="{% static 'photos/Montreal.jpg' %}" ><span class="photo-label">Montréal</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="montreal/"><img class="img-responsive" src="{% static 'photos/Montreal.jpg' %}" ></a>
+                <a href="madagascar/"><img class="img-responsive" src="{% static 'photos/Madagascar.jpg' %}" ><span class="photo-label">Madagascar</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="madagascar/"><img class="img-responsive" src="{% static 'photos/Madagascar.jpg' %}" ></a>
+                <a href="vosges/"><img class="img-responsive" src="{% static 'photos/Vosges.jpg' %}" ><span class="photo-label">Vosges</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="vosges/"><img class="img-responsive" src="{% static 'photos/Vosges.jpg' %}" ></a>
+                <a href="london/"><img class="img-responsive" src="{% static 'photos/London.jpg' %}" ><span class="photo-label">London</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="london/"><img class="img-responsive" src="{% static 'photos/London.jpg' %}" ></a>
+                <a href="switzerland/"><img class="img-responsive" src="{% static 'photos/Switzerland.jpg' %}" ><span class="photo-label">Switzerland</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="switzerland/"><img class="img-responsive" src="{% static 'photos/Switzerland.jpg' %}" ></a>
+                <a href="seattle/"><img class="img-responsive" src="{% static 'photos/Seattle.jpg' %}" ><span class="photo-label">Seattle</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="seattle/"><img class="img-responsive" src="{% static 'photos/Seattle.jpg' %}" ></a>
+                <a href="tremblant/"><img class="img-responsive" src="{% static 'photos/Tremblant.jpg' %}" ><span class="photo-label">Tremblant</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="tremblant/"><img class="img-responsive" src="{% static 'photos/Tremblant.jpg' %}" ></a>
+                <a href="amalfi/"><img class="img-responsive" src="{% static 'photos/Amalfi.jpg' %}" ><span class="photo-label">Positano</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="amalfi/"><img class="img-responsive" src="{% static 'photos/Amalfi.jpg' %}" ></a>
+                <a href="napoli/"><img class="img-responsive" src="{% static 'photos/Napoli.jpg' %}" ><span class="photo-label">Napoli<span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="napoli/"><img class="img-responsive" src="{% static 'photos/Napoli.jpg' %}" ></a>
+                <a href="paris_air_show/"><img class="img-responsive" src="{% static 'photos/Paris Air Show.jpg' %}" ><span class="photo-label">Paris Air Show</span></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="paris_air_show/"><img class="img-responsive" src="{% static 'photos/Paris Air Show.jpg' %}" ></a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-lg-4 thumb">
-                <a href="quebec/"><img class="img-responsive" src="{% static 'photos/Quebec.jpg' %}" ></a>
+                <a href="quebec/"><img class="img-responsive" src="{% static 'photos/Quebec.jpg' %}" ><span class="photo-label">Québec</span></a>
             </div>
       </div>          
-                        
+      <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
     </body>
 </html>    
