@@ -40,6 +40,10 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.vertical{
+    float:left;
+    clear:both;
+}
 
 .photo-label {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
