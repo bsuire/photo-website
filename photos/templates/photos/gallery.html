@@ -1,2 +1,47 @@
-<p> {{album_name}} </p>
+<!Doctype html>
+<html>
+<head>
+    {% load staticfiles %}
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'photos/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'photos/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'photos/css/lightbox.css' %}" />
+</head>
+
+<script>
+    var conHeight = $(".picture").height();
+    var imgHeight = $(".picture img").height();
+    var gap = (imgHeight - conHeight) / 2;
+    $(".picture img").css("margin-top", -gap);
+</script>
+
+<body>
+    
+    <div class="nav">
+        <ul class = pull-left>
+            <li><a href="../architecture/">Architecture</a> </li>
+            <li><a href="../landscapes/">Landscapes</a> </li>
+            <li><a href="../wildlife/">Wildlife</a> </li>
+            <li><a href="../nature/">Nature</a> </li>
+        </ul> 
+        <ul class = pull-right>
+            <li><a href="../">Home</a> </li>
+            <li><a href="../aboutme/">About Me</a> </li>
+        </ul> 
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 gallery">
+        {% for picture in pictures %}
+        {% with ""|add:picture as picpath %}
+        <div class="col-xs-12 col-sm-4 col-md-3 container"><div class="picture"><a href="{% static picpath %}" data-lightbox="gallery"><img class="img-responsive" src="{% static picpath %}"></a></div></div>
+        {% endwith %}
+        {% endfor %}
+    </div>
+        
+    <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
+    <script src="{% static 'photos/js/jquery-1.11.0.min.js' %}"></script>
+    <script src="{% static 'photos/js/lightbox.min.js' %}"></script>
+</body>
 

@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
-existing_albums=["toronto","montreal","madagascar"]
+albums={"toronto":34,"montreal":0}
+album_names=albums.keys()
+picture_paths= []
 
 def home(request):
     context = {}
@@ -12,11 +14,19 @@ def aboutme(request):
 
 def gallery(request,album_name):
     context = {'album_name':album_name}
-    if (existing_albums.count(album_name) == 0):
+    if (album_names.count(album_name) == 0):
         return render(request,'photos/error404.html',context)
     else:
-        return render(request,'photos/'+album_name+'.html',context)
+        generatePicturePaths(album_name)
+        context['pictures']=picture_paths
+        return render(request,'photos/gallery.html',context)
 
 def pageNotFound(request,album_name):
     context = {'album_name':album_name}
     return render(request,'photos/error404.html',context)
+
+
+def generatePicturePaths(name):
+    del picture_paths[0:len(picture_paths)] 
+    for x in range(1,albums[name]+1):
+        picture_paths.append('photos/'+name+'/'+name+'-'+str(x)+'.jpg')
