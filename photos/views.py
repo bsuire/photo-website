@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-existing_albums=["toronto","madagascar"]
+existing_albums=["toronto","montreal","madagascar"]
 
 def home(request):
     context = {}
