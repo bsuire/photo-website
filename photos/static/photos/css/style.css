@@ -36,22 +36,16 @@
 }
 
 .picture {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-bottom:20px;
+    padding-left:0;
+    padding-right:0;
+    height: 200px;
+    width:300px;
+    overflow:hidden;
 }
-.cropped{
-    max-height: 200px;
-    min-height: 200px;
-    max-width: 300px;
-    min-width: 300px;
-    border-width:5px;
-    border-style:solid;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+
+
+.gallery img{
 }
 
 .ratio{
