@@ -2,23 +2,30 @@
 <html>
 <head>
     {% load staticfiles %}
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/bootstrap.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/style.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/lightbox.css' %}" />
 </head>
-
 <script>
-    var conHeight = $(".picture").height();
-    var imgHeight = $(".picture img").height();
-    var gap = (imgHeight - conHeight) / 2;
-    $(".picture img").css("margin-top", -gap);
+    function () {
+    alert("Happy bday!") 
+    });
+</script>
+<script>
+    function crop(pic)
+    {
+        pic.style.height="80px";
+    }
+</script>
+<script>
+    window.addEventListener("resize", function(e) {
+        var picElement = document.getElementsByClassName("asdjkjh")[0];
+        picElement.style.height = picElement.offsetWidth * 0.66;
+    });
 </script>
 
 <body>
-    
     <div class="nav">
         <ul class = pull-left>
             <li><a href="../architecture/">Architecture</a> </li>
@@ -35,13 +42,13 @@
     <div class="col-xs-12 col-sm-12 col-md-12 gallery">
         {% for picture in pictures %}
         {% with ""|add:picture as picpath %}
-        <div class="col-xs-12 col-sm-4 col-md-3 container"><div class="picture"><a href="{% static picpath %}" data-lightbox="gallery"><img class="img-responsive" src="{% static picpath %}"></a></div></div>
+        <div class="col-xs-12 col-sm-4 col-md-3 container"><div class="picture" ><a href="{% static picpath %}" data-lightbox="gallery"><img class="img-responsive" src="{% static picpath %}"></a></div></div>
         {% endwith %}
         {% endfor %}
     </div>
         
-    <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
     <script src="{% static 'photos/js/jquery-1.11.0.min.js' %}"></script>
+    <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
     <script src="{% static 'photos/js/lightbox.min.js' %}"></script>
 </body>
 
