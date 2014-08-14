@@ -8,12 +8,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/lightbox.css' %}" />
 </head>
 <script>
-    function crop(pic)
-    {
-        pic.style.height="80px";
-    }
-</script>
-<script>
     window.addEventListener("resize", function(e) {
         var picsize = document.getElementsByClassName("picture")[0];
         var cropsize = document.getElementsByClassName("crop");
@@ -24,18 +18,31 @@
 </script>
 
 <body>
-    <div class="nav">
-        <ul class = pull-left>
-            <li><a href="../architecture/">Architecture</a> </li>
-            <li><a href="../landscapes/">Landscapes</a> </li>
-            <li><a href="../wildlife/">Wildlife</a> </li>
-            <li><a href="../nature/">Nature</a> </li>
-        </ul> 
-        <ul class = pull-right>
-            <li><a href="../">Home</a> </li>
-            <li><a href="../aboutme/">About Me</a> </li>
-        </ul> 
-    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav pull-right">
+                 <li><a href="../">Home</a></li>
+            </ul>
+            <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#themed-galleries">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="themed-galleries">
+                <ul class="nav navbar-nav">
+                    <li class="divider"></li>
+                    <li><a href="../architecture/">Architecture</a> </li>
+                    <li><a href="../landscapes/">Landscapes</a> </li>
+                    <li><a href="../wildlife/">Wildlife</a> </li>
+                    <li><a href="../nature/">Nature</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 
     <div class="col-xs-12 col-sm-12 col-md-12 gallery">
         {% for picture in pictures %}
@@ -44,7 +51,6 @@
         {% endwith %}
         {% endfor %}
     </div>
-        
     <script src="{% static 'photos/js/jquery-1.11.0.min.js' %}"></script>
     <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
     <script src="{% static 'photos/js/lightbox.min.js' %}"></script>

@@ -1,32 +1,12 @@
+body { 
+    padding-top: 50px; 
+}
+
+
+
 .nav{
     font-size: 16px;
     font-weight:bold;
-    padding:0;
-}
-
-.nav a{
-    color:black;
-}
-
-.nav ul{
-    padding-top:10px;
-    padding-bottom: 0;
-    padding-left:20px;
-    padding-right:20px;
-    /*text-transform: uppercase;*/
-}
-
-.nav .pull-left li {
-    display: inline;
-    padding-right: 30px;
-}
-.nav .pull-right li {
-    display: inline;
-    padding-left: 30px;
-}
-
-.nav .pull-right{
-    float: right;
 }
 
 

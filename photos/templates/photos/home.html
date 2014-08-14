@@ -10,18 +10,30 @@
 </head>
 <body>
     
-    <div class="nav">
-        <ul class = pull-left>
-            <li><a href="architecture/">Architecture</a> </li>
-            <li><a href="landscapes/">Landscapes</a> </li>
-            <li><a href="wildlife/">Wildlife</a> </li>
-            <li><a href="nature/">Nature</a> </li>
-        </ul> 
-        <ul class = pull-right>
-            <li><a href="aboutme/">About Me</a> </li>
-        </ul> 
-    </div>
-
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav pull-right">
+                 <li><a href="aboutme/">About Me</a></li>
+            </ul>
+            <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#themed-galleries">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="themed-galleries">
+                <ul class="nav navbar-nav">
+                    <li class="divider"></li>
+                    <li><a href="architecture/">Architecture</a> </li>
+                    <li><a href="landscapes/">Landscapes</a> </li>
+                    <li><a href="wildlife/">Wildlife</a> </li>
+                    <li><a href="nature/">Nature</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <div class="thumbs">    
             <a class="col-xs-12 col-sm-6 col-lg-4 thumb" href="toronto/"><img class="img-responsive" src="{% static 'photos/toronto/toronto-4.jpg' %}" ><span class="photo-label">Toronto</span></a>
             <a class="col-xs-12 col-sm-6 col-lg-4 thumb" href="montreal/"><img class="img-responsive" src="{% static 'photos/montreal/montreal-1.jpg' %}" ><span class="photo-label">Montréal<span style="font-size:17px"><i>&nbsp coming soon </i></span></span></a>
