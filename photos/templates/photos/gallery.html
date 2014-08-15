@@ -7,15 +7,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/style.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/lightbox.css' %}" />
 </head>
-<script>
-    window.addEventListener("resize", function(e) {
-        var picsize = document.getElementsByClassName("picture")[0];
-        var cropsize = document.getElementsByClassName("crop");
-        for(var i = 0; i < cropsize.length; i++) {
-            cropsize[i].style.height = picsize.offsetWidth * 0.67+"px";
-        }
-    });
-</script>
 
 <body>
 
@@ -54,5 +45,17 @@
     <script src="{% static 'photos/js/jquery-1.11.0.min.js' %}"></script>
     <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
     <script src="{% static 'photos/js/lightbox.min.js' %}"></script>
+    <script>
+        $(document).ready(crop);
+        $(window).resize(crop);
+            
+        function crop() {
+            var picsize = document.getElementsByClassName("picture")[0];
+            var cropsize = document.getElementsByClassName("crop");
+            for(var i = 0; i < cropsize.length; i++) {
+                cropsize[i].style.height = picsize.offsetWidth * 0.67+"px";
+            }
+        };
+    </script>
 </body>
 
