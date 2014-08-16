@@ -2,12 +2,30 @@ body {
     padding-top: 50px; 
 }
 
-
 .nav{
     font-size: 16px;
     font-weight:bold;
     padding:0;
 }
+
+.nav-bottom{
+    text-align:center;
+}
+
+.navbar-nav-bottom a{
+    color:#777;
+}
+
+.navbar-nav-bottom > li > a:hover,
+.navbar-nav-bottom > li > a:focus {
+    color: #333;
+    background-color: transparent;
+}
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 0px;
+}
+
 
 .container-fluid{
     background-color:white;

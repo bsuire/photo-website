@@ -34,7 +34,6 @@
         </div>
     </nav>
 
-
     <div class="col-xs-12 col-sm-12 col-md-12 gallery">
         {% for picture in pictures %}
         {% with ""|add:picture as picpath %}
@@ -42,6 +41,28 @@
         {% endwith %}
         {% endfor %}
     </div>
+    
+    <nav class="navbar nav-bottom">
+        <div class="container-fluid">
+            <div class="col-sm-4 col-xs-1"></div>
+            <div class="col-sm-1 col-xs-3">
+                <ul class="nav navbar-nav-bottom">
+                    <li><a href="../{{ previous }}">Previous</a></li>
+                </ul>
+             </div>
+            <div class="col-sm-2 col-xs-4">
+                <ul class="nav navbar-nav-bottom">
+                    <li><a href="../">Home</a></li>
+                </ul>
+             </div>
+            <div class="col-sm-1 col-xs-3">
+                <ul class="nav navbar-nav-bottom">
+                    <li><a href="../{{next}}">Next</a></li>
+                </ul>
+             </div>
+            <div class="col-sm-4 col-xs-1"></div>
+        </div>
+    </nav>
     <script src="{% static 'photos/js/jquery-1.11.0.min.js' %}"></script>
     <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
     <script src="{% static 'photos/js/lightbox.min.js' %}"></script>
