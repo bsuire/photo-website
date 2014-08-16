@@ -35,6 +35,8 @@
     </nav>
 
     <div class="col-xs-12 col-sm-12 col-md-12 gallery">
+    </div>
+        <div class="container-fluid">
         {% for picture in pictures %}
         {% with ""|add:picture as picpath %}
         <div class="col-xs-12 col-sm-4 col-md-3 container"><div class="crop"><div class="picture" ><a href="{% static picpath %}" data-lightbox="gallery"><img class="img-responsive" src="{% static picpath %}" width="300"height="200"></a></div></div></div>
@@ -42,7 +44,7 @@
         {% endfor %}
     </div>
     
-    <nav class="navbar nav-bottom">
+    <div class="nav-bottom" role="navigation">
         <div class="container-fluid">
             <div class="col-sm-4 col-xs-1"></div>
             <div class="col-sm-1 col-xs-3">
@@ -62,7 +64,7 @@
              </div>
             <div class="col-sm-4 col-xs-1"></div>
         </div>
-    </nav>
+    </div>    
     <script src="{% static 'photos/js/jquery-1.11.0.min.js' %}"></script>
     <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
     <script src="{% static 'photos/js/lightbox.min.js' %}"></script>
