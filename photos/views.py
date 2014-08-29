@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-album_sizes={"toronto":34,"montreal":78,"madagascar":0,"vosges":14}
+album_sizes={"toronto":34,"montreal":80,"madagascar":0,"vosges":14}
 #album_titles={"toronto":"Toronto","montreal":"Montreal"}
 album_names=["toronto","montreal","madagascar", "vosges"] #album_sizes.keys() returns keys sorted alphabetically
 picture_paths= []
@@ -42,7 +42,10 @@ def pageNotFound(request,album_name):
 def generatePicturePaths(name):
     del picture_paths[0:len(picture_paths)] 
     for x in range(1,album_sizes[name]+1):
-        picture_paths.append('photos/'+name+'/'+name+'-'+str(x)+'.jpg')
+        large =  'photos/media/'+name+'/large/'+name+'-'+str(x)+'.jpg'
+        thumb =  'photos/media/'+name+'/thumbs/'+name+'-'+str(x)+'.jpg'
+        picture_paths.append((large,thumb))
+
 #######################################################################################
 
 
