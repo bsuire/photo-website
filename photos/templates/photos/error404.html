@@ -1,10 +1,15 @@
+<!Doctype html>
 <html>
 <head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'photos/css/style.css' %}" />
 </head>
 <body>
-    <div class="404">
-        <h1>Error 404: Page Not Found</h1>
-        <h2>We apologize but the album<span style="color:red" > {{ album_name }}</span> isn't available yet!</h2>
+    <div class="404 error_404">
+        <h2>Error 404: Page Not Found</h2>
+        <h3>I'm sorry but the album<span style="color:red" > {{ album_name }}</span> isn't available yet!</h3>
+        <h3>Please come back soon!</h3>
+        <h3>- Ben</h3>
     </div>
 </body>
 </html>
