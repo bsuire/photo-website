@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/bootstrap.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'photos/css/style.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'photos/css/lightbox.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'photos/css/swipebox.min.css' %}">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
         {% with ""|add:large as pict_path %}
         {% with ""|add:thumb as thumb_path %}
         <div class="col-xs-12 col-sm-4 col-md-3 container"><div class="crop"><div class="picture" >
-                    <a href="{% static pict_path %}" data-lightbox="gallery"><img class="img-responsive" src="{% static thumb_path %}" width="400"></a>
+                    <a href="{% static pict_path %}" class="swipebox"><img class="img-responsive" src="{% static thumb_path %}" width="400"></a>
         </div></div></div>
         {% endwith %}
         {% endwith %}
@@ -71,7 +71,8 @@
     </div>    
     <script src="{% static 'photos/js/jquery-1.11.0.min.js' %}"></script>
     <script src="{% static 'photos/js/bootstrap.min.js' %}"></script>     
-    <script src="{% static 'photos/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'photos/js/jquery.swipebox.min.js' %}"></script>
+
     <script>
         $(document).ready(crop);
         $(window).resize(crop);
@@ -83,6 +84,11 @@
                 cropsize[i].style.height = picsize.offsetWidth * 0.67+"px";
             }
         };
+    </script>
+    <script type="text/javascript">
+        ;( function( $ ) {
+            $( '.swipebox' ).swipebox();
+        } )( jQuery );
     </script>
 </body>
 
