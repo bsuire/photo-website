@@ -136,3 +136,9 @@ left: 50%;
 margin-left: -512px;   /* 50% */
 }
 }
+
+.error_404{
+	text-align:center; 
+	margin-top:50px;
+}
+ 
