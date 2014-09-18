@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-album_sizes={"toronto":34,"montreal":80,"madagascar":140,"vosges":14}
+album_sizes={"architecture":16,"landscapes":18,"wildlife":24,"nature":24,"toronto":34,"montreal":80,"madagascar":140,"vosges":14,"london":76,"seattle":30}
 #album_titles={"toronto":"Toronto","montreal":"Montreal"}
-album_names=["toronto","montreal","madagascar", "vosges"] #album_sizes.keys() returns keys sorted alphabetically
+album_names=["architecture","landscapes","wildlife","nature","toronto","montreal","madagascar", "vosges","london","seattle"] #album_sizes.keys() returns keys sorted alphabetically
 picture_paths= []
 
 def home(request):
