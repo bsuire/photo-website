@@ -127,10 +127,8 @@ height: auto;
 position: fixed;
 top: 0;
 left: 0;
-
-    filter: url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/></svg>"); /* Firefox 10+, Firefox on Android */
-    filter: url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><feGaussianBlur in="SourceGraphic" stdDeviation="10"/></svg>"); 
--moz-filter: blur(3px); 
+    filter: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\"><filter id=\"myfilter\" x=\"0\" y=\"0\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"3\"/></filter></svg>#myfilter');
+    -moz-filter: blur(3px); 
     filter: blur(3px); /* Firefox 34+ */
     -webkit-filter: blur(3px); /* Google Chrome & Safari 6+ */
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
