@@ -38,11 +38,11 @@
     <div class="col-xs-12 col-sm-12 col-md-12 gallery">
     </div>
         <div class="container-fluid">
-        {% for large,thumb in pictures %}
+        {% for large,small in pictures %}
         {% with ""|add:large as pict_path %}
-        {% with ""|add:thumb as thumb_path %}
+        {% with ""|add:small as small_path %}
         <div class="col-xs-12 col-sm-4 col-md-3 container"><div class="crop"><div class="picture" >
-                    <a href="{% static pict_path %}" class="swipebox"><img class="img-responsive" src="{% static thumb_path %}" width="400"></a>
+                    <a href="{% static pict_path %}" class="swipebox"><img class="img-responsive" src="{% static small_path %}" width="400"></a>
         </div></div></div>
         {% endwith %}
         {% endwith %}
