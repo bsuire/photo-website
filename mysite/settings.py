@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'z@_w-)z+3r&%brc(b(=4o!6d17e54ykkm2zn^$-*#!%%9-_$ay'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["bsuire.com"]
 
 
 # Application definition
@@ -79,5 +79,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+         
+STATIC_ROOT = '/home/django/photo-website/photos/'
 
 STATIC_URL = '/static/'
